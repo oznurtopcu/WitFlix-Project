@@ -5,6 +5,7 @@
 body {
     margin: 0;
     padding: 0;
+    font-family:Arial, Helvetica, sans-serif ;
 }
 
 header {
@@ -30,6 +31,7 @@ header nav {
 header nav a {
     text-decoration: none;
     color: black;
+    font-weight: 600;
 }
 
 .search {
@@ -42,6 +44,7 @@ header nav a {
 }
 .search input {
     height: 2rem;
+    width: 250px;
     border: none;
 }
 .search i {
@@ -51,6 +54,54 @@ header nav a {
     height: 2rem;
     width: 2rem;
 }
+
+main {
+    height: 500px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: 1px solid gray;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 768px;
+    margin-left: 2rem;
+
+}
+
+.movie-info {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.user-rating i {
+    color: red;
+}
+
+.movie-details {
+    list-style-type: none;
+    padding-inline-start: 0;
+    color: red;
+    font-weight: bold;
+    line-height: 1.5rem;
+
+}
+
+.btn .btn-lg {
+    width: 150px;
+    height: 50px;
+    color: white;
+    background: #ff0000;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    border: none;
+}
+
+
 
 
 
