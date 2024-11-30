@@ -6,3 +6,58 @@ body {
     margin: 0;
     padding: 0;
 }
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border: 1px solid gray;
+}
+
+header img.logo{
+    height: 5rem;
+}
+
+header nav {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+header nav a {
+    text-decoration: none;
+    color: black;
+}
+
+.search {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    padding: 1rem;
+    width: 25%;
+}
+.search input {
+    height: 2rem;
+    border: none;
+}
+.search i {
+    font-size: 2rem;
+}
+.search img {
+    height: 2rem;
+    width: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
