@@ -1,25 +1,22 @@
-html, body {
-    margin: 0;
+body {
+    margin: 0 auto;
     padding: 0;
     font-family:Arial, Helvetica, sans-serif ;
     width:100%;
     height: 100%;
-    border: 1px solid orange;
+    min-width: 750px;
+    max-width: 1500px;
 }
-
 header {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
-    border: 1px solid purple;
 }
-
 header img.logo{
     height: 5rem;
 }
-
 header nav {
     width: 30%;
     display: flex;
@@ -30,9 +27,7 @@ header nav {
 header nav a {
     text-decoration: none;
     color: black;
-    font-weight: 600;
 }
-
 .search {
     display: flex;
     justify-content: space-around;
@@ -43,46 +38,37 @@ header nav a {
 }
 .search input {
     height: 2rem;
-    width: 250px;
+    width: 50%;
     border: none;
 }
 .search i {
     font-size: 2rem;
 }
-
 main {
-    height: 500px;
     width: 100%;
     display: flex;
     align-items: center;
-    border: 1px solid green;
-    padding: 1rem;
+    padding: 3rem 1rem;
 }
-
 .hero-content {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 2rem;
     max-width: 768px;
-    margin-left: 2rem;
-
+    margin-left: 1rem;
 }
-
 .movie-info {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 1.5rem;
 }
-
 .user-rating i {
     color: red;
 }
-
 .maturity-rating {
     border: 0.5px solid gray;
     border-radius: 5px;
 }
-
 .movie-details {
     list-style-type: none;
     padding-inline-start: 0;
@@ -91,119 +77,117 @@ main {
     line-height: 1.5rem;
 
 }
-
+span {
+    color: black;
+    font-weight: normal;
+}
 .btn .btn-lg {
-    width: 150px;
-    height: 50px;
+    width: 10rem;
+    height: 3rem;
     color: white;
     background: #ff0000;
     border-radius: 10px;
     font-size: 1.1rem;
     border: none;
 }
-
 .suggestion-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: auto;
 }
-
 .suggestion-title a {
     text-decoration: none;
     color: black;
     font-weight: bolder;
 }
-
 h2 {
     font-size: 1rem;
 }
-
 .suggestion-content {
+    width: 100%;
     display: flex;
     flex-direction: row;
-    width: 100%;
-    height: 300px;
     justify-content: space-between;
     align-items: center;
+    overflow-x: auto;
+    margin: 1rem 0;
 }
-
 .suggestion-item {
     border: 1px solid gray;
     border-radius: 10px;
-    width: 27%;
+    flex: 0 0 30%;
     height: 80%;
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    margin: 1rem;
 }
-
 .suggestion-item-content {
     display: flex;
     flex-direction: column;
-    margin: 20px;
-    gap:30px;
+    margin: 2rem;
+    gap: 2rem;
 }
-
-
 .btn .btn-md {
-    width: 150px;
-    height: 50px;
+    width: 10rem;
+    height: 3rem;
     color: white;
     background: #ff0000;
     border-radius: 10px;
     font-size: 1.1rem;
     border: none;
 }
-
-
 footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 20px;
+    gap: 1.5rem;
     padding: 1rem;
-    border: 1px solid red;
+    flex-wrap: wrap;
 }
-
 .footer-title {
     display: flex;
     flex-direction: column;
     max-width: 768px;
 
 }
-
 .footer-title nav {
     display: flex;
-    gap: 50px;
+    gap: 3rem;
 }
-
 .footer-title nav a {
     text-decoration: none;
     color: black;
 }
-
+.download {
+    display: flex;
+    white-space: nowrap;
+}
 .download img{
-    width: 200px;
-    margin-top: 5px;
+    width: 10rem;
+    margin-top: 0.3rem;
 }
-
+.social-icons {
+    display: flex;
+    white-space: nowrap;
+}
 .follow-us i{
-    font-size: 50px;
-    margin: 10px;
+    font-size: 3rem;
+    margin: 0.6rem;
 }
-
 section {
-    border: 1px solid blue;
     padding: 1rem;
     width: 100%;
 }
+@media (max-width: 430px) {
 
+    html {
+        font-size: small;
+    }
 
-
-@media (max-width: 768px) {
-
+    body {
+        width: 100%;
+        min-width: 300px;
+    }
+    
     header {
         flex-wrap: wrap;
         width: 100%;
@@ -211,19 +195,48 @@ section {
     
     header nav {
         width: 80%;
-        display: flex;
-        justify-content: space-between;
         font-size: 1rem;
         margin: auto;
         order: 3;
         gap: 1rem;
     }
 
+    .search {
+        width: 50%;
+    }
+
+    .hero-content {
+        margin-left: 1rem;
+    }
+
+    .suggestion-content {
+        flex-wrap: wrap;
+        overflow-x: hidden;
+    }
+
+    .suggestion-item {
+        height: auto;
+        margin: 0.5rem;
+    }
+
+    .suggestion-item-content {
+        margin: 1rem;
+        gap: auto;
+    }
+
+    .btn .btn-md {
+        width: 6rem;
+        height: 2rem;
+        font-size: 0.8rem;
+    }
+
     footer{
         flex-direction: column-reverse;
     }
 
-
+    .suggestion-row-hidden {
+        display: none;
+    }
 
 }
 
