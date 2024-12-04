@@ -177,7 +177,7 @@ section {
     padding: 1rem;
     width: 100%;
 }
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
     html {
         font-size: small;
